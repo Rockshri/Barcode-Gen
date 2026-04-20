@@ -18,7 +18,7 @@ export function AuthProvider({ children }) {
                 setUser(session?.user ?? null);
                 if (!session?.user) setProfile(null); // clear immediately on logout
                 setLoading(false);
-            }
+            }  
         );
         return () => subscription.unsubscribe();
     }, []);
